@@ -19,20 +19,18 @@ Requirements
 
   MPI library (e.g., OpenMPI, MPICH)
 
-    CMake (optional, for building)
-
 
 Compile directly with MPI:
 
 bash
-mpicxx -std=c++11 -O3 monte_carlo_integration.cpp -o monte_carlo_integration
+mpicxx -std=c++11 -O3 main.cpp -o output
 
 Usage
 
 Run the program using mpirun or your MPI implementation's equivalent:
 
 bash
-mpirun -np <number_of_processes> ./monte_carlo_integration
+mpirun -np <number_of_processes> ./output
 
 The program will prompt for the following inputs:
 
@@ -67,6 +65,5 @@ Performance Considerations
   Random number generation is optimized for each process to ensure statistical independence.
 
   Load balancing is implemented to distribute samples evenly across processes.
-
 
 
