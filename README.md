@@ -43,10 +43,15 @@ The program will prompt for the following inputs:
 Example
 
 bash
+
 $ mpirun -np 2 ./output
+
 Enter the lower limit: 0
+
 Enter the upper limit: 3.14159265358979323846                
+
 Enter the number of samples: 100000000
+
 The value calculated by Monte Carlo integration is: 2.00002
 
 Customization
@@ -55,7 +60,9 @@ To integrate a different function, modify the targetFunction in the source code:
 
 cpp
 double targetFunction(double x) {
-    return std::sin(x); // Replace with your desired function
+
+  return std::sin(x); // Replace with your desired function
+
 }
 
 Performance Considerations
